@@ -31,7 +31,6 @@ public class Game {
     public static void addToMainPanel(JLabel card) {
         mainPanel.add(card, Integer.valueOf(MyPanel.LAYER++));
     }
-
     public void playedCard() {
         // player.setTurn(true);
         com.getComputer(0).setTurn(true);
