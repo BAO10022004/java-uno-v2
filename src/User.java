@@ -45,6 +45,8 @@ public abstract class User {
 
     public abstract void setCardsPosition();
 
+    public abstract Card drawCard();
+
     public int sizeCards() {
         return cards.size();
     }
@@ -55,25 +57,6 @@ public abstract class User {
         cards.remove(card);
 
         setCardsPosition();
-    }
-
-    public Card drawCard() {
-        if (Game.deck.getDeck().size() == 0) {
-            System.out.println("Het bai roi cuu");
-        }
-
-        Card card = Game.deck.getOneCard();
-        card.setLocation(Deck.X, Deck.Y);
-        card.addMouseListener(card); // only player not computer
-        card.setUser(this);
-
-        Game.addToMainPanel(card);
-
-        cards.add(card);
-
-        card.drawCardAnimation();
-
-        return card;
     }
 
     public void setTurn(boolean turn) {

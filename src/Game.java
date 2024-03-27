@@ -34,6 +34,8 @@ public class Game {
     public void playedCard() {
         // player.setTurn(true);
         com.getComputer(0).setTurn(true);
+
+        // ? com.computerPlayed(0) ?
         com.computer0Played();
     }
 }
